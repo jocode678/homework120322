@@ -3,6 +3,7 @@ from animalclasses import Cat
 cat1 = Cat('Audrey')
 print('My name is', cat1.name)
 cat1.eat()
+cat1.makeSound()
 
 from animalclasses import Bird
 

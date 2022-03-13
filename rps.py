@@ -1,7 +1,7 @@
 import rpsfunc
 
-
 answer = input('Would you like to play rock paper scissors? (yes/no) ')
+
 while answer == 'yes':
 
     # Call on my function here
@@ -14,6 +14,12 @@ while answer == 'yes':
     outcome = rpsfunc.game(user_choice, comp_choice)
 
     print(outcome, 'You chose', user_choice, 'and the computer chose', comp_choice,)
+
+    user_score = rpsfunc.scoring_user(outcome)
+    print('User score is', user_score)
+    comp_score = rpsfunc.scoring_comp(outcome)
+    print('Computer score is', comp_score)
+
     answer = input('Would you like to play again? ')
 
 else:

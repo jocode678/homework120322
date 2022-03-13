@@ -1,5 +1,10 @@
 # put functions outside of loop
 # function for user choice
+
+global_comp_score = 0
+global_user_score = 0
+
+
 def convert_user_choice():
     user_choice = input("Enter R, P or S for rock, paper or scissors: ")
     while user_choice not in ('R', 'P', 'S'):
@@ -38,3 +43,20 @@ def game(user_choice, comp_choice):
             user_choice == 'scissors' and comp_choice == 'rock'):
         outcome = 'You have lost :(.'
     return outcome
+
+
+
+def scoring_comp(outcome):
+    if outcome == 'You have lost :(.':
+        global global_comp_score
+        global_comp_score += 1
+    return global_comp_score
+
+
+def scoring_user(outcome):
+    if outcome == 'You have won!':
+        global global_user_score
+        global_user_score += 1
+    return global_user_score
+
+

@@ -8,6 +8,9 @@ class Cat:
     def eat(self):
         print('As a cat I love to eat lots of tasty treats')
 
+    def makeSound(self):
+        print('meow meow')
+
 class Bird:
 
     def __init__(self, str):
